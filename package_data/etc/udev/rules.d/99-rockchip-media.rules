@@ -1,0 +1,8 @@
+# /dev/mpp_service for hardware video decoding/encoding
+SUBSYSTEM=="misc", KERNEL=="mpp_service", MODE="0666"
+
+# /dev/rga for 2D graphics acceleration
+SUBSYSTEM=="misc", KERNEL=="rga", MODE="0666"
+
+# DMA-HEAP for zero-copy buffers
+SUBSYSTEM=="dma_heap", MODE="0666"

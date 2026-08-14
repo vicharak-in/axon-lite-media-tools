@@ -1,0 +1,6 @@
+[submodule "mpp"]
+	path = mpp
+	url = https://github.com/rockchip-linux/mpp.git
+[submodule "rockchip-vaapi"]
+	path = rockchip-vaapi
+	url = https://github.com/woodyst/rockchip-vaapi.git

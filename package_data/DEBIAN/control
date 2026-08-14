@@ -1,0 +1,9 @@
+Package: axon-lite-media-tools
+Version: 1.0.1-1
+Architecture: arm64
+Maintainer: vicharak
+Section: video
+Priority: optional
+Depends: firefox-esr, libdrm2, libc6, librga2
+Description: Monolithic package for Rockchip RK3576 hardware video acceleration.
+ Includes Rockchip MPP, rockchip-vaapi driver, and Firefox VA-API configurations.

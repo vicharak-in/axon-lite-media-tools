@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+ENV_FILE="/etc/environment"
+
+# Ensure LIBVA_DRIVER_NAME=rockchip
+if ! grep -q "^LIBVA_DRIVER_NAME=" $ENV_FILE; then
+    echo "LIBVA_DRIVER_NAME=rockchip" >> $ENV_FILE
+fi
+
+# Ensure MOZ_DISABLE_RDD_SANDBOX=1
+if ! grep -q "^MOZ_DISABLE_RDD_SANDBOX=" $ENV_FILE; then
+    echo "MOZ_DISABLE_RDD_SANDBOX=1" >> $ENV_FILE
+fi
+
+exit 0

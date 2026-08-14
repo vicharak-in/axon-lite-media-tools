@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# We do not remove the environment variables automatically because they might be
+# needed by other things, and it avoids breaking the user's setup on uninstall.
+exit 0
