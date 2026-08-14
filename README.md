@@ -24,7 +24,7 @@ sudo apt install -y cmake make gcc g++ pkg-config meson ninja-build libdrm-dev d
 
 1. Clone this repository (with its submodules):
    ```bash
-   git clone --recursive <URL_TO_THIS_REPO>
+   git clone --recursive https://github.com/vicharak-in/axon-lite-media-tools.git
    cd axon-lite-media-tools
    ```
    *(If you've already cloned it without `--recursive`, run `git submodule update --init --recursive`)*
