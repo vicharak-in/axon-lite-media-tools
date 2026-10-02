@@ -17,7 +17,7 @@ For the best results and to avoid cross-compilation complexities, **you must bui
 You will need the following build dependencies:
 ```bash
 sudo apt update
-sudo apt install -y cmake make gcc g++ pkg-config meson ninja-build libdrm-dev dpkg-dev git
+sudo apt install -y cmake make gcc g++ pkg-config meson ninja-build libdrm-dev dpkg-dev libva-dev git
 ```
 
 ## How to Build

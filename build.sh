@@ -9,7 +9,7 @@ echo "=== Axon Lite Media Tools Build Script ==="
 
 echo "=> Checking dependencies..."
 MISSING_DEPS=""
-for dep in cmake make gcc g++ pkg-config meson ninja-build libdrm-dev dpkg-dev; do
+for dep in cmake make gcc g++ pkg-config meson ninja-build libdrm-dev dpkg-dev libva-dev; do
     if ! dpkg -s $dep >/dev/null 2>&1; then
         MISSING_DEPS="$MISSING_DEPS $dep"
     fi
