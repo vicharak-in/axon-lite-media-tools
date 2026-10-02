@@ -40,10 +40,15 @@ cd ../..
 
 echo "=> Building rockchip-vaapi..."
 cd rockchip-vaapi
-rm -rf build-pkg
-meson setup build-pkg --prefix=/usr
-ninja -C build-pkg
-DESTDIR="$PKG_DIR" ninja -C build-pkg install
+make clean || true
+make -j$(nproc)
+mkdir -p "$PKG_DIR/usr/lib/aarch64-linux-gnu/dri"
+if [ -f src/rockchip_drv_video.so ]; then
+    cp src/rockchip_drv_video.so "$PKG_DIR/usr/lib/aarch64-linux-gnu/dri/rockchip_drv_video.so"
+else
+    cp rockchip_drv_video.so "$PKG_DIR/usr/lib/aarch64-linux-gnu/dri/rockchip_drv_video.so"
+fi
+chmod 755 "$PKG_DIR/usr/lib/aarch64-linux-gnu/dri/rockchip_drv_video.so"
 cd ..
 
 echo "=> Injecting package metadata and configs..."
